@@ -5,11 +5,16 @@
 		"description":"Calculate Digital",
 		"author":"miss",
 		"icon":"command",
-		"tags":"dig,cal"
+		"tags":"cal,dig"
 	}
  **/
 
 function main(input) {
-    var result = eval(input.text)
+    var result = input.text
+    try {
+        result = eval(input.text)
+    }catch (e) {
+
+    }
     input.text = result
 }
